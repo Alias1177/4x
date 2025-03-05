@@ -1,0 +1,107 @@
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav {
+  transition: background-color 0.5s ease-in-out 0.1s;
+  height: 72px;
+}
+
+.hidden-nav {
+  transform: translateY(-100%);
+}
+
+
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+   }
+
+.marquee > div {
+     display: inline-block;
+     animation: scroll 30s linear infinite;
+   }
+ 
+   @keyframes scroll {
+     0% {
+       transform: translateX(100%);
+     }
+     100% {
+       transform: translateX(-100%);
+     }
+   }
+
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  #chart {
+    height: 86%;
+    width: 100%;
+  }
+        /* Market Ticker Specific Styles */
+  .market-ticker {
+    background-color: #04296d !important; /* Permanent dark blue background */
+  }
+
+  .market-ticker .text-green-500 {
+    color: #22c55e !important; /* Fixed green color */
+  }
+
+  .market-ticker .text-red-500 {
+    color: #ef4444 !important; /* Fixed red color */
+  }
+
+  .market-ticker .text-lg {
+    font-weight: bold;
+    font-size: 1.125rem; /* Text size adjustment (optional) */
+  }
+
+
+
+/* Общий стиль для текста */
+.neon-title, .neon-paragraph {
+  font-size: 1rem; /* Настройте размер текста */
+  color: #fff; /* Основной цвет текста */
+  text-shadow: 
+      0 0 5px #00ffcc,
+      0 0 10px #00ffcc,
+      0 0 20px #00ffcc,
+      0 0 40px #00ffcc,
+      0 0 80px #00ffcc,
+      0 0 100px #00ffcc; /* Создание "свечения" */
+}
+
+/* Анимация мерцания */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      text-shadow: 
+          0 0 5px #00ffcc,
+          0 0 10px #00ffcc,
+          0 0 20px #00ffcc,
+          0 0 40px #00ffcc,
+          0 0 80px #00ffcc,
+          0 0 100px #00ffcc;
+  }
+  20%, 24%, 55% {
+      text-shadow: 
+          0 0 2px #00ffcc,
+          0 0 4px #00ffcc,
+          0 0 8px #00ffcc,
+          0 0 20px #00ffcc,
+          0 0 30px #00ffcc,
+          0 0 60px #00ffcc;
+  }
+}
+
+/* Применение анимации */
+.neon-title {
+  animation: neon-flicker 1.5s infinite alternate;
+}
+.neon-paragraph {
+  animation: neon-flicker 2s infinite alternate;
+}
+
