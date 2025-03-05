@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4X Forex</title>
+    <link rel="icon" href="styles/assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles/css/common/body.css">
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+</head>
+<body class="dark-mode font-open-sans">
+    <!-- Header -->
+    <header id="header" class="sticky top-0 w-full shadow-md z-50 transform transition-all duration-300 bg-gradient-to-r from-gray-200 to-gray-200 to-transparent">
+      <div>
+        <nav class="container mx-auto px-4 flex justify-between items-center py-4">        
+          <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="index.html">
+            <img src="styles/assets/logo.png" alt="4X Logo" class="w-12 h-12">
+          </a>
+        <a>
+          <button href="index.html" class="ml-3 text-xl text-black font-bold">4X</button>
+        </a>
+        </div>
+            <div class="nav-links absolute md:static absolute text-black md:min-h-fit min-h-[60vh] left-0 top-[-100%] sm:hide hidden md:block md:w-auto w-full flex items-center px-14 transition-all duration-300">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 justify-end">
+                        <li class="relative group">
+                          <a class="hover:text-black text-xl cursor-pointer" href="market.html">Market</a>
+                          <ul class="absolute w-[150px]  top-full hidden group-hover:flex flex-col bg-gray-300 shadow-lg p-3 rounded-md">
+                            <li class="flex flex-row">
+                              <a class="hover:text-[#293855] text-lg py-1 px-2" href="stockmarket.html">Stocks</a>
+                            </li>
+                            <li class="flex flex-row">
+                                <a class="hover:text-[#293855] text-lg py-1 px-2" href="cryptomarket.html">Crypto</a>
+                              </li>
+                          <li class="flex flex-row">
+                            <a class="hover:text-[#293855] text-lg py-1 px-2" href="forexmarket.html">Forex</a>
+                          </li>
+                          <li class="flex flex-row">
+                            <a class="hover:text-[#293855] text-lg py-1 px-2" href="sharesmarket.html">Shares</a>
+                          </li>
+                          <li class="flex flex-row">
+                            <a class="hover:text-[#293855] text-lg py-1 px-2" href="indicesmarket.html">Indices</a>
+                          </li>
+                          <li class="flex flex-row">
+                            <a class="hover:text-[#293855] text-lg py-1 px-2" href="commoditiesmarket.html">Commodities</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="relative group">
+                        <a class="hover:text-black text-xl cursor-pointer" href="aitrader.html">Trade AI</a>
+                        <ul class="absolute w-[150px]  top-full hidden group-hover:flex flex-col bg-gray-300 shadow-lg p-3 rounded-md">
+                          <li class="flex flex-row">
+                            <a class="hover:text-[#293855] text-lg py-1 px-2" href="tweets.html">Community</a>
+                          </li>
+                          <li class="flex flex-row">
+                          <a class="hover:text-[#293855] text-lg py-1 px-2" href="copytrading.html">CopyTrading</a>
+                        </li>
+                        <li class="flex flex-row">
+                          <a class="hover:text-[#293855] text-lg py-1 px-2" href="education.html">Education</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="relative group">
+                      <a class="hover:text-black text-xl cursor-pointer" href="news.html">News</a>
+                      <ul class="absolute w-[150px]  top-full hidden group-hover:flex flex-col bg-gray-300 shadow-lg p-3 rounded-md">
+                        <li class="flex flex-row">
+                          <a class="hover:text-[#293855] text-lg py-1 px-2" href="stocksnews.html">Stocks</a>
+                        </li>
+                        <li class="flex flex-row">
+                            <a class="hover:text-[#293855] text-lg py-1 px-2" href="cryptonews.html">Crypto</a>
+                          </li>
+                      <li class="flex flex-row">
+                        <a class="hover:text-[#293855] text-lg py-1 px-2" href="forexnews.html">Forex</a>
+                      </li>
+                      <li class="flex flex-row">
+                        <a class="hover:text-[#293855] text-lg py-1 px-2" href="sharesnews.html">Shares</a>
+                      </li>
+                      <li class="flex flex-row">
+                        <a class="hover:text-[#293855] text-lg py-1 px-2" href="indicesnews.html">Indices</a>
+                      </li>
+                      <li class="flex flex-row">
+                        <a class="hover:text-[#293855] text-lg py-1 px-2" href="commoditiesnews.html">Commodities</a>
+                      </li>
+                      <li class="flex flex-row">
+                        <a class="hover:text-[#293855] text-lg py-1 px-2" href="worldnews.html">World</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="relative group">
+                    <a class="hover:text-black text-xl cursor-pointer" href="brokers.html">Brokers</a>
+                    <ul class="absolute w-[150px]  top-full hidden group-hover:flex flex-col bg-gray-300 shadow-lg p-3 rounded-md">
+                      <li class="flex flex-row">
+                          <a class="hover:text-[#293855] text-lg py-1 px-2" href="brokers.html">Top Brokers</a>
+                        </li>
+                    <li class="flex flex-row">
+                      <a class="hover:text-[#293855] text-lg py-1 px-2" href="compare.html">Compare</a>
+                    </li>
+                    <li class="flex flex-row">
+                      <a class="hover:text-[#293855] text-lg py-1 px-2" href="comments.html">Comments</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="relative group">
+                  <a class="hover:text-black text-xl cursor-pointer" href="contact.html">More</a>
+                  <ul class="absolute w-[150px]  top-full hidden group-hover:flex flex-col bg-gray-300 shadow-lg p-3 rounded-md">
+                    <li class="flex flex-row">
+                        <a class="hover:text-[#293855] text-lg py-1 px-2" href="about us.html">About Us</a>
+                      </li>
+                  <li class="flex flex-row">
+                    <a class="hover:text-[#293855] text-lg py-1 px-2" href="tutorial.html">Tutorial</a>
+                  </li>
+                  <li class="flex flex-row">
+                    <a class="hover:text-[#293855] text-lg py-1 px-2" href="pricing.html">Pricing</a>
+                  </li>
+                </ul>
+              </li>
+                </ul>
+              </div>              
+              <a  src="" class="flex items-center justify-between gap-8" href="login.html" >
+                <button class="bg-[#98b5a4] hover:bg-[#162A2C] text-black hover:text-[#D6E0E2] border-b-4 dark-mode:text-white w-[100px] md:w-[100px] px-5 py-2 rounded-full transition-all duration-100">Login</button>
+              </a>
+
+                <!-- Language Toggle Button -->
+                <button id="languageToggle"></button>
+                
+                <!-- Dropdown Menu -->
+                <div href="mainen.html" class="dropdown relative">
+                    <button class="search w-8 h-8 flex justify-center items-center cursor-pointer text-[#005450] text-base font-semibold bg-transparent">
+                    <img src="styles/assets/united-kingdom.png" alt="ENG">
+                    </button>
+                    <div class="dropdown-content absolute hidden w-[100px] mt-8 rounded-lg bg-gray-300 py-2 shadow-xl">
+                    <a href="maintr.html" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-300">
+                        <img class="w-6 h-6" src="styles/assets/turkey.png" alt="TR">
+                        <span class="text-sm font-medium text-gray-700">TR</span>
+                    </a>
+                    <a href="mainru.html" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-300">
+                        <img class="w-6 h-6" src="styles/assets/russia.png" alt="RU">
+                        <span class="text-sm font-medium text-gray-700">RU</span>
+                    </a>
+                    </div>
+                </div>
+                <button id="themeToggle" class="w-10 h-10 rounded-full border border-gray-600 flex justify-center items-center">
+                    <i class="fas fa-sun text-lg"></i>
+                    <i class=" hidden fas fa-moon text-lg"></i>
+                </button>
+                <div x-data="{ isMobileMenuOpen: false }" class="relative">
+                  <!-- Mobile Menu Button -->
+                  <button
+                    class="block md:hidden text-xl p-2 bg-gray-200 rounded-md"
+                    x-on:click="isMobileMenuOpen = !isMobileMenuOpen"
+                  >
+                    <i class="fas fa-bars"></i>
+                  </button>
+                
+                  <!-- Mobile Dropdown Menu -->
+                  <div
+                    x-show="isMobileMenuOpen"
+                    x-transition
+                    x-cloak
+                    class="absolute bg-gray-200 top-full right-0 mt-2 w-48 shadow-md rounded-md border border-gray-200 z-50"
+                  >
+                    <ul class="p-2 space-y-1">
+                      <li><a href="charts.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Charts</a></li>
+                      <li><a href="market.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Market</a></li>
+                      <li><a href="aitrader.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Trade AI</a></li>
+                      <li><a href="news.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">News</a></li>
+                      <li><a href="brokers.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Brokers</a></li>
+                      <li><a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">More</a></li>
+                    </ul>
+                  </div>
+                </div>
+                                                
+            </div>
+        </nav>
+      </div>
+    </header>
+    <section class="">
+      <div class="market-ticker relative py-2 item-cenfter bg-gradient-to-r from-[#98b5a4] to-[#162A2C] ">
+        <div class="relative py-2 overflow-hidden">
+          <div class="marquee">
+            <div class="flex space-x-8 text-sm font-medium">
+              <span class="text-lg font-bold text-green-500">BTC/USD 45,320 ▲ 2.34%</span>
+              <span class="text-lg font-bold text-red-500">ETH/USD 3,240 ▼ -1.45%</span>
+              <span class="text-lg font-bold text-green-500">XRP/USD 0.56 ▲ 0.89%</span>
+              <span class="text-lg font-bold text-red-500">SOL/USD 42 ▼ -0.67%</span>
+              <span class="text-lg font-bold text-green-500">ADA/USD 0.34 ▲ 1.22%</span>
+              <span class="text-lg font-bold text-red-500">DOGE/USD 0.07 ▼ -2.10%</span>
+              <span class="text-lg font-bold text-green-500">BNB/USD 320 ▲ 1.54%</span>
+              <span class="text-lg font-bold text-green-500">DOT/USD 5.30 ▲ 0.88%</span>
+              <span class="text-lg font-bold text-red-500">MATIC/USD 0.87 ▼ -0.50%</span>
+              <span class="text-lg font-bold text-green-500">LTC/USD 140 ▲ 3.14%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="container mx-auto px-4 py-8">
+      <!-- Key Stats -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-md shadow-md">
+          <label id="MarketLabel" class="block text-sm font-medium text-black dark-mode:text-white">Select</label>
+          <div class="relative mt-2">
+            <input
+              type="text"
+              list="MarketOptions"
+              id="MarketSelector"
+              class="w-full rounded-lg border border-gray-300 pr-12 pl-4 text-gray-700 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none sm:text-sm"
+              placeholder="Choose an option"
+              oninput="updateLabel()"
+            />
+            <span class="absolute inset-y-0 right-3 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-gray-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+              </svg>
+            </span>
+          </div>
+          <datalist id="MarketOptions">
+            <option value="USD/EUR - US Dollar to Euro"></option>
+            <option value="GBP/USD - British Pound to US Dollar"></option>
+            <option value="BTC/USD - Bitcoin to US Dollar"></option>
+            <option value="ETH/USD - Ethereum to US Dollar"></option>
+            <option value="Gold (XAU/USD)"></option>
+            <option value="S&P 500 Index"></option>
+            <option value="NASDAQ Composite"></option>
+            <option value="Crude Oil (WTI)"></option>
+          </datalist>
+          <ul class="mt-4 space-y-2">
+            <li class="flex justify-between"><span>Open</span><span>145.23</span></li>
+            <li class="flex justify-between"><span>High</span><span>150.12</span></li>
+            <li class="flex justify-between"><span>Low</span><span>143.56</span></li>
+            <li class="flex justify-between"><span>Close</span><span>148.67</span></li>
+          </ul>
+        </div>
+        <div class="col-span-2 p-4 rounded-md shadow-md">
+          <a href="charts.html">
+            <button class="text-gray-700 font-semibold underline transform hover:scale-105 transition-all duration-300">Charts</button>
+          </a>
+          <div class="mt-4">
+            <div class="bg-gray-200 h-64 rounded-md flex items-center justify-center">
+              <span class="text-gray-500">Chart Area</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <section class="container mx-auto px-4 py-8">
+      <div class="flex items-center">
+        <!-- Sol Ok Butonu -->
+        <button
+          aria-label="Previous slide"
+          id="left-arrow"
+          class="rounded-full border border-[#98b5a4] text-[#98b5a4] p-3 transition hover:bg-[#98b5a4] hover:text-white mr-5"
+        >
+          <svg
+            class="size-5 rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 5l7 7-7 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+    
+        <!-- Market Kutuları -->
+        <div id="sliderContainer" class="w-10/12 overflow-hidden">
+          <ul id="slider" class="flex w-full space-x-3">
+            <!-- Orijinal Elemanlar -->
+            <li class="p-3 flex items-center justify-center w-[200px] h-[200px] shrink-0">
+              <div class="border rounded-lg w-full h-full flex flex-col items-center justify-center">
+                <h2 class="text-sm font-medium">S&P 500</h2>
+                <p class="text-green-500 text-lg font-semibold">+32.91</p>
+                <p class="text-xs text-gray-500">+0.54%</p>
+              </div>
+            </li>
+    
+            <li class="p-3 flex items-center justify-center w-[200px] h-[200px] shrink-0">
+              <div class="border rounded-lg w-full h-full flex flex-col items-center justify-center">
+                <h2 class="text-sm font-medium">DAX</h2>
+                <p class="text-green-500 text-lg font-semibold">+235.58</p>
+                <p class="text-xs text-gray-500">+1.12%</p>
+              </div>
+            </li>
+    
+            <li class="p-3 flex items-center justify-center w-[200px] h-[200px] shrink-0">
+              <div class="border rounded-lg w-full h-full flex flex-col items-center justify-center">
+                <h2 class="text-sm font-medium">FTSE 100</h2>
+                <p class="text-red-500 text-lg font-semibold">-8.49</p>
+                <p class="text-xs text-gray-500">-0.10%</p>
+              </div>
+            </li>
+    
+            <li class="p-3 flex items-center justify-center w-[200px] h-[200px] shrink-0">
+              <div class="border rounded-lg w-full h-full flex flex-col items-center justify-center">
+                <h2 class="text-sm font-medium">Nikkei 225</h2>
+                <p class="text-green-500 text-lg font-semibold">+615.00</p>
+                <p class="text-xs text-gray-500">+1.58%</p>
+              </div>
+            </li>
+    
+            <li class="p-3 flex items-center justify-center w-[200px] h-[200px] shrink-0">
+              <div class="border rounded-lg w-full h-full flex flex-col items-center justify-center">
+                <h2 class="text-sm font-medium">Gold</h2>
+                <p class="text-green-500 text-lg font-semibold">+9.00</p>
+                <p class="text-xs text-gray-500">+0.33%</p>
+              </div>
+            </li>
+    
+            <li class="p-3 flex items-center justify-center w-[200px] h-[200px] shrink-0">
+              <div class="border rounded-lg w-full h-full flex flex-col items-center justify-center">
+                <h2 class="text-sm font-medium">BTC</h2>
+                <p class="text-green-500 text-lg font-semibold">+2,500.00</p>
+                <p class="text-xs text-gray-500">+5.65%</p>
+              </div>
+            </li>
+    
+            <li class="p-3 flex items-center justify-center w-[200px] h-[200px] shrink-0">
+              <div class="border rounded-lg w-full h-full flex flex-col items-center justify-center">
+                <h2 class="text-sm font-medium">ETH</h2>
+                <p class="text-green-500 text-lg font-semibold">+200.00</p>
+                <p class="text-xs text-gray-500">+3.45%</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+    
+        <!-- Sağ Ok Butonu -->
+        <button
+          aria-label="Next slide"
+          id="right-arrow"
+          class="rounded-full border border-[#98b5a4] text-[#98b5a4] p-3 transition hover:bg-[#98b5a4] hover:text-white ml-5"
+        >
+          <svg
+            class="size-5 rtl:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 5l7 7-7 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+    
+      <!-- Market Overview and Watchlist -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-md shadow-md">
+          <h1 class="text-gray-700 font-semibold">Market Overview</h1>
+          <div class="mt-4">
+            <p class="flex justify-between"><span>S&P 500</span><span class="text-green-600">+1.25%</span></p>
+            <p class="flex justify-between"><span>BTC/USD</span><span class="text-red-600">-0.75%</span></p>
+            <p class="flex justify-between"><span>Gold</span><span class="text-green-600">+0.50%</span></p>
+          </div>
+        </div>
+        <div class="p-4 rounded-md shadow-md">
+          <h2 class="text-gray-700 font-semibold">Watchlist</h2>
+          <ul class="mt-4 space-y-2">
+            <li class="flex justify-between"><span>AAPL</span><span class="text-green-600">+1.15%</span></li>
+            <li class="flex justify-between"><span>TSLA</span><span class="text-red-600">-2.03%</span></li>
+            <li class="flex justify-between"><span>AMZN</span><span class="text-green-600">+0.85%</span></li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-md shadow-md">
+          <h2 class="text-gray-700 font-semibold">News</h2>
+          <ul class="mt-4 space-y-2">
+            <li><a href="#" class="text-blue-600 hover:underline">Stock Market Rallies Amid Optimism</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">BTC Faces Resistance at $40K</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline">Gold Prices Surge on Inflation Worries</a></li>
+          </ul>
+        </div>
+      </section>
+    
+      <!-- Market Comparison -->
+      <section class="shadow-md rounded-lg p-6 container mx-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="text-gray-500 border-b">
+              <th class="py-2">Name</th>
+              <th class="py-2">Last</th>
+              <th class="py-2">Chg.</th>
+              <th class="py-2">Chg. %</th>
+              <th class="py-2">Market Overview</th>
+              <th class="text-left py-2 px-4">Market Cap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="py-2">Dow Jones</td>
+              <td>$44,116.70</td>
+              <td class="text-green-500">+90.89</td>
+              <td class="text-green-500">+0.21%</td>
+              <td class="py-2 px-4">$2.7T</td>
+              <td>
+                <div class="w-32 bg-gray-200 rounded-full h-2">
+                  <div class="bg-green-500 h-2 rounded-full" style="width: 40%;"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-2">DAX</td>
+              <td>$21,277.10</td>
+              <td class="text-green-500">+235.58</td>
+              <td class="text-green-500">+1.12%</td>
+              <td class="py-2 px-4">$4.9T</td>
+              <td>
+                <div class="w-32 bg-gray-200 rounded-full h-2">
+                  <div class="bg-green-500 h-2 rounded-full" style="width: 60%;"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-2">FTSE 100</td>
+              <td>$8,539.80</td>
+              <td class="text-red-500">-8.49</td>
+              <td class="text-red-500">-0.10%</td>
+              <td class="py-2 px-4">$1.8T</td>
+              <td>
+                <div class="w-32 bg-gray-200 rounded-full h-2">
+                  <div class="bg-red-500 h-2 rounded-full" style="width: 20%;"></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    
+
+
+    
+    
+    <footer class="body-font">
+      <div class="container pt-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+         <div class="w-64 flex-shrnik-0 md:mx-0 mx-auto text-center md:text-left">
+            <p class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <button href="index.html">
+                <img class="w-11 mr-2" src="styles/assets/logo.png" alt="...">
+              </button>
+                 <span class="text-sm font-semibold text-black">Create  <br> your Reality</span>
+            </p>
+            <p class="mt-2 text-sm text-black">
+              We combine the power of AI and advanced analytical tools to help you make more confident and informed decisions in the world of trading. Our innovative solutions allow you to receive accurate forecasts and deep analytics, making your trading more efficient and profitable.
+         </div>
+         <div class="flex-grow flex flex-wrap md:pl-20 -md:-10 md:mt-0 mt-10 md:text-left text-center">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+               <h2 class="title-font font-medium text-black tracking-widest text-sm mb-3">Services</h2>
+               <div class="list-none mb-10">
+                  <li class="mb-2">
+                      <a class="text-gray-400 hover:text-black" href="market.html">Market</a>
+                  </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="aitrader.html">Trader AI</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="news.html">News</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="brokers.html">Brokers</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="contact.html">More</a>
+                   </li>
+                  </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+               <h2 class="title-font font-medium text-black tracking-widest text-sm mb-3">INFORMATION</h2>
+               <div class="list-none mb-10">
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="about us.html">About Us</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="return.html">Return Policy</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="terms&conditions.html">Terms & Condition</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="privacypolicy.html">Privacy Policy</a>
+                   </li>
+               </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+               <h2 class="title-font font-medium text-black tracking-widest text-sm mb-3">CUSTOMER SERVICE</h2>
+               <div class="list-none mb-10">
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="services.html">Service</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="feedback.html">Feedback</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="tutorial.html">Tutorial</a>
+                   </li>
+                   <li class="mb-2">
+                       <a class="text-gray-400 hover:text-black" href="contact.html">Contact</a>
+                   </li>
+               </div>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-black tracking-widest text-sm mb-3">SUBSCRIBE</h2>
+              <p class="mt-2 text-sm text-gray-500">Start your Trading journey with 4X, learn new skills and <br>be informed about all events!</p>
+           <div class="mt-6">
+              <a class="text-xl" href="https://www.facebook.com/"><i class="fa-brands fa-facebook text-[#1877F2] transition-all duration-100 hover:saturate-100 saturate-0 transition-[filter]"></i></a>
+              <a class="text-xl ml-5" href="https://x.com/?mx=2"><i class="fa-brands fa-brands fa-x-twitter text-[#1DA1F2] transition-all duration-100 hover:saturate-100 saturate-0 transition-[filter]"></i></a>
+              <a class="text-xl ml-5" href="https://www.youtube.com/"><i class="fa-brands fa-youtube text-[#FF0000] transition-all duration-100 hover:saturate-100 saturate-0 transition-[filter]"></i></a>
+              <a class="text-xl ml-5" href="https://web.telegram.org/"><i class="fa-brands fa-telegram text-[#0088cc] transition-all duration-100 hover:saturate-100 saturate-0 transition-[filter]"></i></a>
+              <a class="text-xl ml-5" href="https://www.instagram.com/"><i class="fa-brands fa-instagram text-[#E1306C] transition-all duration-100 hover:saturate-100 saturate-0 transition-[filter]"></i></a>
+           </div>
+           </div>
+         </div>
+      </div>
+      <div class="bg-opacity-75">
+       <div class="contsiner mx-auto py-4 px-20  sm:flex-row">
+          <p class="text-sm text-center sm:text-left ">© 2025. All Rights Reserved by 4X</p>
+       </div>
+      </div>
+  </footer>
+
+  <script>
+      // Dark/Light Mode Toggle
+      const themeToggle = document.getElementById('themeToggle');
+      const body = document.body;
+    
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('bg-[#1a1a1a]');
+        body.classList.toggle('bg-gray-100');
+        themeToggle.innerHTML = body.classList.contains('dark-mode')
+          ? '<i class="fas fa-moon text-lg"></i>' // Dark mode icon
+          : '<i class="fas fa-sun text-lg"></i>'; // Light mode icon
+      });
+
+            // Header Hide on Scroll
+    const header = document.getElementById("header");
+    let lastScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > lastScrollY) {
+        header.classList.add("hidden-nav");
+      } else {
+        header.classList.remove("hidden-nav");
+      }
+      lastScrollY = window.scrollY;
+    });
+    
+    
+      // Language Toggle (Optional Functionality)
+      const languageToggle = document.getElementById('languageToggle');
+      languageToggle.addEventListener('click', () => {
+        alert('Language options coming soon!');
+      });
+    
+      // Dropdown Toggle
+      const dropdownButton = document.querySelector('.dropdown button');
+      const dropdownContent = document.querySelector('.dropdown-content');
+    
+      dropdownButton.addEventListener('click', () => {
+        dropdownContent.classList.toggle('hidden');
+      });
+    
+      // Close Dropdown on Outside Click
+      document.addEventListener('click', (event) => {
+        if (!dropdownButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+          dropdownContent.classList.add('hidden');
+        }
+      });
+                // Select elements to exclude from theme changes
+        const marketTicker = document.querySelector('.market-ticker');
+
+        themeToggle.addEventListener('click', () => {
+          body.classList.toggle('dark-mode'); // Toggle the dark mode on the body
+
+          // Change other text colors, excluding market ticker
+          document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, a, li, button')
+            .forEach(element => {
+              if (!marketTicker.contains(element)) {
+                element.classList.toggle('text-black');
+                element.classList.toggle('text-white');
+              }
+            });
+        });
+    </script>
+
+    <script type="module">
+      import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+    
+      const keenSlider = new KeenSlider(
+        '#keen-slider',
+        {
+          loop: true,
+          slides: {
+            origin: 'center',
+            perView: 1.25,
+            spacing: 16,
+          },
+          breakpoints: {
+            '(min-width: 1024px)': {
+              slides: {
+                origin: 'auto',
+                perView: 1.5,
+                spacing: 32,
+              },
+            },
+          },
+        },
+        []
+      )
+    
+      const keenSliderPrevious = document.getElementById('keen-slider-previous')
+      const keenSliderNext = document.getElementById('keen-slider-next')
+    
+      const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop')
+      const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop')
+    
+      keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+      keenSliderNext.addEventListener('click', () => keenSlider.next())
+    
+      keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev())
+      keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
+    </script>
+
+
+    <script>
+      const slider = document.getElementById("slider");
+      const leftArrow = document.getElementById("left-arrow");
+      const rightArrow = document.getElementById("right-arrow");
+      const boxSize = 220;
+      let currentIndex = 0;
+    
+      function moveSlider(direction) {
+        if (direction === "right") {
+          slider.appendChild(slider.children[0]); // İlk elemanı sona taşı
+        } else {
+          slider.prepend(slider.children[slider.children.length - 1]); // Son elemanı başa taşı
+        }
+      }
+    
+      rightArrow.addEventListener("click", () => moveSlider("right"));
+      leftArrow.addEventListener("click", () => moveSlider("left"));
+    
+    </script>
+    
+    
+</body>
+<script src="scripts/main.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</html>

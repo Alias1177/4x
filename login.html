@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4X Login</title>
+  <link rel="icon" href="styles/assets/logo.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center" 
+      style="background-image: url('styles/assets/=.png');">
+
+  <!-- Overlay (optional for better contrast) -->
+  <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+
+  <!-- Login Form Container -->
+  <div class="relative bg-white p-8 rounded shadow-md w-full max-w-sm z-10">
+    <h1 class="text-2xl font-bold text-gray-800 text-center">Welcome Back!</h1>
+    <p class="text-sm text-gray-600 text-center mt-2">Please sign in to your account.</p>
+
+    <!-- Login Form -->
+    <form action="/login" method="POST" class="mt-6">
+      <!-- Email Field -->
+      <div>
+        <label for="email" class="block text-gray-700 font-medium">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Enter your email"
+          required
+          class="w-full p-3 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+      </div>
+
+      <!-- Password Field -->
+      <div class="mt-4">
+        <label for="password" class="block text-gray-700 font-medium">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Enter your password"
+          required
+          class="w-full p-3 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+      </div>
+
+      <!-- Remember Me Checkbox -->
+      <div class="flex items-center mt-4">
+        <input 
+          type="checkbox" 
+          id="remember" 
+          name="remember" 
+          class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+        />
+        <label for="remember" class="ml-2 text-gray-600">Remember me</label>
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="w-full bg-[#98b5a4] hover:bg-[#162A2C] text-black hover:text-[#D6E0E2] border-b-4 dark:text-white px-5 py-2 rounded-full transition-all duration-100 shadow mt-6">
+        Login
+      </button>
+    </form>
+
+    <!-- Additional Links -->
+    <div class="mt-6 text-center">
+      <p class="text-gray-600">
+        Don't have an account? 
+        <a href="signup.html" class="text-blue-500 hover:underline">Sign up</a>
+      </p>
+      <p class="text-gray-600 mt-2">
+        Forgot your password? 
+        <a href="forgot password.html" class="text-blue-500 hover:underline">Reset it</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
