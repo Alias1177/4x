@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-center mb-4">Register</h2>
+        <form id="registerForm">
+            <div class="mb-4">
+                <label class="block text-gray-700">Full Name</label>
+                <input type="text" id="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Age</label>
+                <input type="number" id="age" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required>
+            </div>
+            
+            <button type="submit" class="w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                Register
+            </button>
+        </form>
+        <p id="message" class="mt-4 text-center text-red-500"></p>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("registerForm");
+        const messageElement = document.getElementById("message");
+        const submitButton = form.querySelector("button[type='submit']");
+        const API_URL = "http://193.143.231.230:8080/users"; // Укажи свой URL
+    
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+    
+            // Получаем данные формы
+            const name = document.getElementById("name").value.trim();
+            const ageInput = document.getElementById("age").value.trim();
+            const age = ageInput ? parseInt(ageInput, 10) : null;
+    
+            // Проверка данных
+            if (!name || isNaN(age) || age <= 0) {
+                showMessage("Please enter a valid name and age.", "text-red-500");
+                return;
+            }
+    
+            // Деактивируем кнопку на время запроса
+            submitButton.disabled = true;
+            submitButton.classList.add("opacity-50");
+    
+            try {
+                const response = await fetch(API_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ name, age }),
+                });
+    
+                if (!response.ok) throw new Error(`Server error: ${response.status}`);
+    
+                const result = await response.json();
+                showMessage("Registration successful!", "text-green-500");
+    
+                // Очищаем форму после успешной регистрации
+                form.reset();
+            } catch (error) {
+                showMessage("Registration failed! " + error.message, "text-red-500");
+            } finally {
+                // Включаем кнопку обратно
+                submitButton.disabled = false;
+                submitButton.classList.remove("opacity-50");
+            }
+        });
+    
+        // Функция для отображения сообщений
+        function showMessage(message, colorClass) {
+            messageElement.textContent = message;
+            messageElement.className = `mt-4 text-center ${colorClass} transition-opacity duration-300`;
+    
+            // Автоочистка сообщения через 3 секунды
+            setTimeout(() => {
+                messageElement.textContent = "";
+            }, 3000);
+        }
+    });    
+</script>
+</body>
+</html>
